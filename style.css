@@ -63,3 +63,13 @@ border : 2px solid whitesmoke;
 .c1 button:hover{
     background-color: rgb(78, 0, 161);
 }
+footer{
+    margin-top: 35vh;
+    text-align: center;
+    text-decoration: none;
+color: aliceblue;
+}
+footer a{
+    color: white;
+    font-family: "PS Regular";
+}
