@@ -20,7 +20,7 @@ function clickk() {
     a.innerText = arr[b];
 }
 function share() {
-    navigator.clipboard.writeText(arr[b])
+    // navigator.clipboard.writeText(arr[b])
     if (navigator.share) {
         navigator.share({
           title: 'Joke',
