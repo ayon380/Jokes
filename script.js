@@ -13,7 +13,7 @@ let arr = [` I just got my doctor's test results and I'm really upset about it. 
 console.log(arr[5]);
 let a = document.getElementById("para")
 let b =0
-a.innerText = arr[Math.floor(Math.random() * 10)]
+a.innerText = arr[0]
 function clickk() {
     console.log("clicked");
     b = Math.floor(Math.random() * 9)
