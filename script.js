@@ -11,14 +11,24 @@ let arr = [` I just got my doctor's test results and I'm really upset about it. 
     ` Don’t challenge Death to a pillow fight. Unless you’re prepared for the reaper cushions.`,
     `  I don’t have a carbon footprint. I just drive everywhere.`]
 console.log(arr[5]);
-let a=document.getElementById("para")
-let b=document.getElementById("f1")
-a.innerText=arr[Math.floor(Math.random() * 10)]
+let a = document.getElementById("para")
+let b =0
+a.innerText = arr[Math.floor(Math.random() * 10)]
 function clickk() {
     console.log("clicked");
-    a.innerText=arr[Math.floor(Math.random() * 9)]
+    b = Math.floor(Math.random() * 9)
+    a.innerText = arr[b];
 }
-function share(){
-    navigator.clipboard.writeText(arr[6])
-    alert("Text Copied")
+function share() {
+    navigator.clipboard.writeText(arr[b])
+    if (navigator.share) {
+        navigator.share({
+          title: 'Joke',
+          text: arr[b],
+        })
+          .then(() => console.log('Successful share'))
+          .catch((error) => console.log('Error sharing', error));
+      }
+    console.log(arr[b]);
+    // alert("Text Copied")
 }
